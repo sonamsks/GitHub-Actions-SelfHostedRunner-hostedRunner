@@ -8,18 +8,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
       - name: Verify Python & Pip
-        run: |
+        run:
           python3 --version
-          python3 -m pip --version
+          python3 -m ensurepip --upgrade || true
+          python3 -m pip install --upgrade pip || true
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
+        run: 
           pip install pytest
 
       - name: Run tests
-        run: |
+        run:
           cd src
-          python -m pytest addition.py
+          python3 -m pytest addition.py
