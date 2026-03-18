@@ -9,10 +9,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify Python
+      - name: Verify Python & Pip
         run: |
           python3 --version
-          pip3 --version
+          python3 -m pip --version
 
       - name: Install dependencies
         run: |
