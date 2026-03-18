@@ -13,9 +13,8 @@ jobs:
   
       - name: Install dependencies
         run: 
-          pip install pytest
+          apt install python-pytest
 
       - name: Run tests
         run:
-          cd src
-          python3 -m pytest addition.py
+          cd src && pytest addition.py
