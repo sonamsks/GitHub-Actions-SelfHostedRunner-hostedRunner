@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: install pip
-        run: apt install python3-full python3-pip
+        run: sudo apt install python3-full python3-pip -y
   
       - name: Install dependencies
         run: 
