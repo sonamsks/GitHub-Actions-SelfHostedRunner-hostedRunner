@@ -11,12 +11,12 @@ jobs:
       - name: Verify Python & Pip
         run:
           python3 --version
-          python3 -m ensurepip --upgrade || true
-          apt install python3-pip
+      - name: install pip
+        run: python3 -m ensurepip --upgrade
 
       - name: Install dependencies
         run: 
-          pip install pytest
+          python3 -m pip install pytest
 
       - name: Run tests
         run:
