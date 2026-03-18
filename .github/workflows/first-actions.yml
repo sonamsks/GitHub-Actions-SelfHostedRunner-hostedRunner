@@ -13,7 +13,7 @@ jobs:
   
       - name: Install dependencies
         run: 
-          apt install python-pytest
+          sudo apt install python-pytest -y
 
       - name: Run tests
         run:
