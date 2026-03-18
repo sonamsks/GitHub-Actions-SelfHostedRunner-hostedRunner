@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: 
-          pip install pytest
+          python3 -m pip install pytest
 
       - name: Run tests
         run:
