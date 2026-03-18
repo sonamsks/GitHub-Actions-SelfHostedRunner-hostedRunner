@@ -8,12 +8,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Verify Python & Pip
-        run:
-          python3 --version
       - name: install pip
-        run: python3 -m ensurepip --upgrade
-
+        run: apt install python3-full python3-pip
+  
       - name: Install dependencies
         run: 
           python3 -m pip install pytest
